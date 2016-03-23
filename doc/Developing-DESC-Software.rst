@@ -134,7 +134,7 @@ This repository structure has several notable features:
    libraries, `swig <http://www.swig.org/>`__-exposed modules, as well
    as execute test code when the \ ``scons`` build command is issued.
 -  The \ ``ups`` folder contains files with configuration for
-   the \ ```eups`` package management
+   the \ `eups package management
    system <https://github.com/RobertLuptonTheGood/eups/>`__ that the DM
    team uses.
 
@@ -180,7 +180,7 @@ and coding idioms (using the with statement), etc..
 For Python, the `DM style
 guidelines <http://developer.lsst.io/en/latest/coding/python_style_guide.html>`__
 are essentially the \ `PEP8 Python Style
-Guide <https://www.python.org/dev/peps/pep-0008/>`__; while\ `for
+Guide <https://www.python.org/dev/peps/pep-0008/>`__; while \ `for
 C++ <http://developer.lsst.io/en/latest/coding/cpp_style_guide.html>`__,
 they are based on a few industry standard conventions
 (`CARMA <https://www.mmarray.org/workinggroups/computing/cppstyle.html>`__,
