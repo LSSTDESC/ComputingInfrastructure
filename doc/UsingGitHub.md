@@ -14,6 +14,15 @@ This seems to be working fine. See Jim Chiang's [DESC cookie cutter](https://git
 We are still learning how best to do this. Default GitHub behavior is to send **notifications about all issues** and pull requests to each person with "Write" or "Admin" repo access, as well as to everyone else who has opted to "Watch" the repo. This can be over-ridden in your profile settings, but this is not obvious to people. Repos can also be "unwatched" and individual issues can be "unsubscribed" from, but again, this is not readily apparent. The [Getting Started](https://github.com/drphilmarshall/GettingStarted#watching) repo now has an [FAQ about this](https://github.com/drphilmarshall/GettingStarted#watching), which probably needs advertizing. 
 
 
+### Managing projects with Issues, Milestones, Labels and ZenHub
+
+Bryce Kalmbach (@jbkalmbach) and Phil Marshall (@drphilmarshall) are attempting to use GitHub and ZenHub to manage the [Monitor](https://github.com/DarkEnergyScienceCollaboration/Monitor) and [Twinkles](https://github.com/DarkEnergyScienceCollaboration/Twinkles) projects, respectively.
+
+* "Epics" are now supported by ZenHub, although our [homegrown labeling solution](https://github.com/DarkEnergyScienceCollaboration/Twinkles/issues?q=is%3Aopen+is%3Aissue+label%3AEpic) seems to get almost all of that functionality.
+* "Burndown charts" are provided by ZenHub, and hopefully will help us manage our time better. They rely on the assignment of "complexity" to each issue.
+ 
+Eventually, a short page on how to do all this in the DESC context will be in order. 
+
 ### Logging progress in an "Online Lab-book"
 
 This came up in the Twinkles project, [in issue #186](https://github.com/DarkEnergyScienceCollaboration/Twinkles/issues/186#issuecomment-205454214). 
