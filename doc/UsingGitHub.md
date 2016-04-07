@@ -6,7 +6,7 @@ This page is for tracking the collaboration's use of GitHub, and any needs arisi
 
 ### Sharing Code
 
-This seems to be working fine. See Jim Chiang's [DESC cookie cutter](https://github.com/jchiang87/desc-package-template) project for the start of an attempt to help DESC members begin projects with well-organized and easily importable repos. 
+This seems to be working fine. See the [DESC cookie cutter](https://github.com/DarkEnergyScienceCollaboration/desc_package_template) project for the start of an attempt to help DESC members begin projects with well-organized and easily importable repos. 
 
 
 ### Communication via the Issues system
