@@ -30,10 +30,12 @@ Installation Instructions
    source activate /project/projectdirs/lsst/lsstDM/Cori/conda-env/2016-04-15/LSST_STACK
    conda install --channel http://eupsforge.net/conda/dev lsst-sims
    conda install nose
-   conda install pandas
+   conda install panda
    
-   .. code-block:: bash
-      :name: symlink-libs
+afw expects to find libssl.so.10 and libcrypto.so.10
+
+.. code-block:: bash
+   :name: symlink-libs
       
-       ln -s /project/projectdirs/lsst/lsstDM/Cori/conda-env/.pkgs/openssl-1.0.2g-0/lib/libcrypto.so.1.0.0 /project/projectdirs/lsst/lsstDM/Cori/conda-env/<date>/LSST_STACK/opt/lsst/afw/lib/libcrypto.so.10
-       ln -s /project/projectdirs/lsst/lsstDM/Cori/conda-env/.pkgs/openssl-1.0.2g-0/lib/libssl.so.1.0.0 /project/projectdirs/lsst/lsstDM/Cori/conda-env/<date>/LSST_STACK/opt/lsst/afw/lib/libssl.so.10
+    ln -s /project/projectdirs/lsst/lsstDM/Cori/conda-env/.pkgs/openssl-1.0.2g-0/lib/libcrypto.so.1.0.0 /project/projectdirs/lsst/lsstDM/Cori/conda-env/<date>/LSST_STACK/opt/lsst/afw/lib/libcrypto.so.10
+    ln -s /project/projectdirs/lsst/lsstDM/Cori/conda-env/.pkgs/openssl-1.0.2g-0/lib/libssl.so.1.0.0 /project/projectdirs/lsst/lsstDM/Cori/conda-env/<date>/LSST_STACK/opt/lsst/afw/lib/libssl.so.10
