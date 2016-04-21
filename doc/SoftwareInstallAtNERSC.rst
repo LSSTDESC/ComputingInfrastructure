@@ -19,3 +19,21 @@ command line do:
 
 Installation Instructions
 ----------------------------------
+.. code-block:: bash
+   :name: conda-install-instructions
+   
+   module swap PrgEnv-intel PrgEnv-gnu
+   module swap gcc gcc/4.9.3
+   module load python/2.7-anaconda
+   export CONDA_ENVS_PATH=$PWD/conda-env
+   conda create --prefix /project/projectdirs/lsst/lsstDM/Cori/conda-env/<date>/LSST_STACK --channel http://eupsforge.net/conda/dev lsst-apps
+   source activate /project/projectdirs/lsst/lsstDM/Cori/conda-env/2016-04-15/LSST_STACK
+   conda install --channel http://eupsforge.net/conda/dev lsst-sims
+   conda install nose
+   conda install pandas
+   
+   .. code-block:: bash
+      :name: symlink-libs
+      
+       ln -s /project/projectdirs/lsst/lsstDM/Cori/conda-env/.pkgs/openssl-1.0.2g-0/lib/libcrypto.so.1.0.0 /project/projectdirs/lsst/lsstDM/Cori/conda-env/<date>/LSST_STACK/opt/lsst/afw/lib/libcrypto.so.10
+       ln -s /project/projectdirs/lsst/lsstDM/Cori/conda-env/.pkgs/openssl-1.0.2g-0/lib/libssl.so.1.0.0 /project/projectdirs/lsst/lsstDM/Cori/conda-env/<date>/LSST_STACK/opt/lsst/afw/lib/libssl.so.10
