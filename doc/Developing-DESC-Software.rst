@@ -21,7 +21,7 @@ A lot of the tips below were introduced and demo'd by Jim Chiang at the
 SLAC 2016 collaboration meeting, in the Computing Tutorial session. `You
 can view his slides
 here <https://confluence.slac.stanford.edu/download/attachments/206768025/CollabCoding_tutorial.pdf?version=1&modificationDate=1457468188000&api=v2>`__,
-and the video should be on youtube shortly.
+and the `video is available on youtube <https://www.youtube.com/watch?v=pZSvybTWl-g>`__.
 
 .. _DevelopingDESCSoftware-Using-Git-and-GitHub:
 
