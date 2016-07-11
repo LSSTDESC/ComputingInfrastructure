@@ -17,6 +17,11 @@ about `git` and GitHub, which hopefully you will find useful to refer to later.
 In the tutorial, you will contribute to the GettingStarted project by fixing
 various bugs in the markdown "code" that it contains.
 
+### Requirements
+
+You will need:
+* `git` working from the command line on your laptop. It comes with the Apple developer tools; otherwise Google "installig git"
+* An account at [GitHub.com](http://github.com). Choose a username that is close to your real name to make it easy for people to find you and @mention you.
 
 -----
 
