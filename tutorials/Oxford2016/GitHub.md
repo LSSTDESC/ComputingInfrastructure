@@ -52,6 +52,7 @@ search the existing issues first to see if the problem is already known about.
   For example, check out:
     * [the current Twinkles epics](https://github.com/DarkEnergyScienceCollaboration/Twinkles/issues?q=is%3Aissue+is%3Aopen+label%3AEpic)
     * [the current Twinkles milestones](https://github.com/DarkEnergyScienceCollaboration/Twinkles/milestones)
+
 -----
 
 ### Resources
