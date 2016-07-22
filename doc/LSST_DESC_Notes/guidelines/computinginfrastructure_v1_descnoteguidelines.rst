@@ -43,14 +43,16 @@ Steps
 
 * Locate the appropriate GitHub repository where the new LSST DESC Note should be stored and fork the repository
 * Under the doc/LSST_DESC_Notes directory, create a new subdirectory with a 
-* Copy the CI LSST DESC Note template into your new directory
-* Write the Note
+* Copy the `Computing Infrastructure LSST DESC Note template <https://github.com/DarkEnergyScienceCollaboration/ComputingInfrastructure/blob/master/doc/LSST_DESC_Notes/template_LSST_DESC_Note.rst>`__ into your new directory
+* Rename the template to follow the form:
+* Edit your new file with the contents of your note
 * When complete and ready for review, submit a Pull Request
 * Project leads will review the note, iterate via comments on the Pull Request, and merge into the repository when the note is accepted
 
 To Do
 ======
 
+* `Create setup script <https://github.com/DarkEnergyScienceCollaboration/ComputingInfrastructure/issues/28>`__ 
 
 
 
