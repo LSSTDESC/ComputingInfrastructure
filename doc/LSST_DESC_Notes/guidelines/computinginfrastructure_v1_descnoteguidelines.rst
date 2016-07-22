@@ -57,6 +57,9 @@ To Do
 ======
 
 * `Create setup script <https://github.com/DarkEnergyScienceCollaboration/ComputingInfrastructure/issues/28>`__ 
+* Iterate on the guidelines above
+* Further test the suitability of Pandoc for conversion into PDF, and take another look at Sphinx
+* Enable travis-ci to automate creation of PDF and population of GitHub-pages
 
 
 
