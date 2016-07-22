@@ -35,15 +35,16 @@
 LSST DESC Note Title Here
 =========================
 
-.. insert the author names
+.. insert author(s) names using a list
 
-Author(s):
+:Authors: - Author 1
+         - Author 2
 
 .. |date| date::
 
 .. manual version numbering for now
 
-Version: 1
+:Version: 1
 
 .. Trying out automated dating for generated documents
 
