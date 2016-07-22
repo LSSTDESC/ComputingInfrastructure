@@ -43,9 +43,9 @@ Steps
 ======
 
 * Locate the appropriate GitHub repository where the new LSST DESC Note should be stored and fork the repository
-* Under the doc/LSST_DESC_Notes directory, create a new subdirectory with a 
+* Under the doc/LSST_DESC_Notes directory, create a new subdirectory with a suitable name which is unique to this repository
 * Copy the `Computing Infrastructure LSST DESC Note template <https://github.com/DarkEnergyScienceCollaboration/ComputingInfrastructure/blob/master/doc/LSST_DESC_Notes/template_LSST_DESC_Note.rst>`__ into your new directory
-* Rename the template to follow the form:  *project_version_filename.ext*
+* Rename the template to follow the form, reusing the same name as your new directory:  *uniquefilename.ext*
 
  
 
