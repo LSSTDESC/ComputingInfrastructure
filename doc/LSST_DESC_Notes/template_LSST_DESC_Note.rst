@@ -32,7 +32,7 @@
 
 
 =========================
-LSST DESC Note Title Here
+LSST DESC Note Title 
 =========================
 
 .. insert author(s) names using a list
