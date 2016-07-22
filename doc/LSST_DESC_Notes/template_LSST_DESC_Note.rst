@@ -35,11 +35,18 @@
 LSST DESC Note Title Here
 =========================
 
+.. insert the author names
+
 Author(s):
 
 .. |date| date::
 
+.. manual version numbering for now
+
 Version: 1
+
+.. Trying out automated dating for generated documents
+
 This document was generated on: |date|
 
 Write the note; right here.
