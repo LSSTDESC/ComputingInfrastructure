@@ -34,9 +34,10 @@
 Guidelines for Writing LSST DESC Notes. 
 ======================================
 
-Heather Kelly, Phil Marshall
+:Authors: - Heather Kelly
+          - Phil Marshall
 
-Version: 1
+:Version: 1
 
 Steps 
 ======
@@ -45,6 +46,9 @@ Steps
 * Under the doc/LSST_DESC_Notes directory, create a new subdirectory with a 
 * Copy the `Computing Infrastructure LSST DESC Note template <https://github.com/DarkEnergyScienceCollaboration/ComputingInfrastructure/blob/master/doc/LSST_DESC_Notes/template_LSST_DESC_Note.rst>`__ into your new directory
 * Rename the template to follow the form:
+
+ 
+
 * Edit your new file with the contents of your note
 * When complete and ready for review, submit a Pull Request
 * Project leads will review the note, iterate via comments on the Pull Request, and merge into the repository when the note is accepted
