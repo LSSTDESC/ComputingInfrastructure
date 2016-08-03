@@ -22,15 +22,24 @@ This document was generated on: |date|
 
 Introduction
 ============
-This is a template LSST DESC Note, for you to adapt for your own work.
+This is a template LSST DESC Note, for you to adapt for your own work. It also contains instructions for how to get started writing a note.
+
+Getting Started
+===============
+* Fork the GitHub repository of your project if you haven't already. 
+* Under the doc/LSST_DESC_Notes directory (which you might have to create), make a new subdirectory with a suitable name to contain your LSST DESC Note. This name needs to be unique to this repository, but need not contain the name of the repository.
+* Copy the `Computing Infrastructure LSST DESC Note template <https://github.com/DarkEnergyScienceCollaboration/ComputingInfrastructure/blob/master/doc/LSST_DESC_Notes/template_LSST_DESC_Note.rst>`_ (i.e. this file) into your new directory, and rename it ``index.rst``.
+* Edit your new file with the contents of your Note, following the guidelines in the template.
+* When complete and ready for review, submit a Pull Request to the base repository.
+* Project leads will review your Note, iterate with you via the comments on the Pull Request, and finally merge it into the repository when the note is accepted. They will then tag the repo, to mark the first version of this LSST DESC Note.
 
 Sectioning 
 ==========
-Your content can easily be divided into subsections, as follows.
+As you can see above, your content can easily be divided into sections. You can also make subsections, as follows.
 
 A Subsection
 ------------
-You can also have subsubsections, like this:
+You can even have subsubsections, like this:
 
 A Subsubsection
 ^^^^^^^^^^^^^^^
@@ -43,6 +52,7 @@ And so is this.
 Another Subsection
 ------------------
 And so on.
+
 
 Code
 ====
@@ -58,10 +68,12 @@ or this:
 
   echo "Hello World"
 
+Inline mentions of code ``objects`` can be made using pairs of backquotes.
+
 
 Figures
 =======
-To add images, add the image file (PNG, SVG or JPG preferred) to the ``_static`` subdirectory in this note's folder. Here's an example:
+To add figures, add the required image file (PNG, SVG or JPG preferred) to the ``_static`` subdirectory in your Note's folder. Here's an example:
 
 .. figure:: ./_static/desc-logo.png
   :name: fig-logo
