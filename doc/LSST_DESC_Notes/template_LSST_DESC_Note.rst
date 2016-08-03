@@ -6,15 +6,15 @@
   See also:
   * https://github.com/lsst-sqre/sqr-000/blob/master/index.rst for an LSST technote deescribing LSST technotes, on which DESC notes are styled.
   * https://github.com/lsst-dm/dmtn-008/blob/master/index.rst for a nice example LSST technote by Michael Wood-Vasey, which is rendered by the LSST technotes system at http://dmtn-008.lsst.io/en/latest/
-  * http://docs.lsst.codes/en/latest/development/docs/rst_styleguide.html for a guide to reStructuredText writing.
+  * http://docs.lsst.codes/en/latest/development/docs/rst_styleguide.html for a guide to reStructuredText writing, and https://github.com/ralsina/rst-cheatsheet/blob/master/rst-cheatsheet.rst for a nice cheatsheet.
 
 
 
-=========================
-LSST DESC Note Title 
-=========================
+===============================================
+LSST DESC Notes: Template and Author Guidelines
+===============================================
 
-*Author A. Name, Author B. Name*
+*Heather Kelly, Phil Marshall*
 
 .. |date| date::
 This document was generated on: |date|
@@ -22,11 +22,11 @@ This document was generated on: |date|
 
 Introduction
 ============
-This is a template LSST DESC Note, for you to adapt for your own work. The original can be found `on GitHub <https://github.com/DarkEnergyScienceCollaboration/ComputingInfrastructure/blob/master/doc/LSST_DESC_Notes/template_LSST_DESC_Note.rst>`_. 
+This is a template LSST DESC Note, for you to adapt for your own work.
 
 Sectioning 
 ==========
-This can be divided into subsections, as follows.
+Your content can easily be divided into subsections, as follows.
 
 A Subsection
 ------------
@@ -34,11 +34,11 @@ You can also have subsubsections, like this:
 
 A Subsubsection
 ^^^^^^^^^^^^^^^
-See?
+See? This is a subsubsection.
 
 Another Subsubsection
 ^^^^^^^^^^^^^^^^^^^^^
-Easy.
+And so is this.
 
 Another Subsection
 ------------------
@@ -61,7 +61,6 @@ or this:
 
 Figures
 =======
-
 To add images, add the image file (PNG, SVG or JPG preferred) to the ``_static`` subdirectory in this note's folder. Here's an example:
 
 .. figure:: ./_static/desc-logo.png
@@ -73,3 +72,8 @@ To add images, add the image file (PNG, SVG or JPG preferred) to the ``_static``
   This is the figure caption: above we have the LSST DESC logo, in PNG format.
 
 And then the text continues. Note that GitHub ignores the image sizing commands when presenting reST format documents; sphinx might not.
+
+
+References
+==========
+You can cite papers (or anything else) by providing hyperlinks. For example, you might have been impressed by the DESC White Paper `(LSST Dark Energy Science Collaboration 2012) <http://arxiv.org/abs/1211.0310>`_.  It should be possible to convert these links to latex citations automatically later. 
