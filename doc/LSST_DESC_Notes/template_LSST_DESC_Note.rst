@@ -1,24 +1,19 @@
-..
-  Template for LSST DESC Notes, including guidelines for authors.
-
-  Heather Kelly & Phil Marshall, Summer 2016
-
-  See also:
-  * https://github.com/lsst-sqre/sqr-000/blob/master/index.rst for an LSST technote deescribing LSST technotes, on which DESC notes are styled.
-  * https://github.com/lsst-dm/dmtn-008/blob/master/index.rst for a nice example LSST technote by Michael Wood-Vasey, which is rendered by the LSST technotes system at http://dmtn-008.lsst.io/en/latest/
-  * http://docs.lsst.codes/en/latest/development/docs/rst_styleguide.html for a guide to reStructuredText writing, and https://github.com/ralsina/rst-cheatsheet/blob/master/rst-cheatsheet.rst for a nice cheatsheet.
-
 .. figure:: ./_static/header.png
   :name: header
   :target: ./_static/header.png
   :align: center
   
-
 ===============================================
 LSST DESC Notes Template and Author Guidelines
 ===============================================
 
-*Heather Kelly, Phil Marshall*
+*Heather Kelly (SLAC), Phil Marshall (SLAC)*
+
+LSST DESC Notes are designed to be citeable, and so need to conform to the expectations of the academic research community to some 
+extent. They should contain a short abstract, which should be placed here. In this Note we outline the steps for starting a new 
+LSST DESC Note, getting it reviewed within the collaboration, and then "publishing" it (not in a journal, but on the web nonetheless). 
+We then provide a quick introduction to preparing Notes in restructuredtext, highlighting aspects of LSST DESC Note style, and 
+giving some pointers to good resources.
 
 .. |date| date::
 This Note was generated on: |date|
@@ -105,3 +100,14 @@ And then the text continues. Note that GitHub ignores the image sizing commands 
 References
 ==========
 You can cite papers (or anything else) by providing hyperlinks. For example, you might have been impressed by the DESC White Paper `(LSST Dark Energy Science Collaboration 2012) <http://arxiv.org/abs/1211.0310>`_.  It should be possible to convert these links to latex citations automatically later. 
+
+
+Further Resources
+=================
+
+LSST DESC notes are styled after LSST technotes `(Sick 2016) <https://sqr-000.lsst.io/>`_. You can also `view the restructured text 
+of (Sick 2016) <https://github.com/lsst-sqre/sqr-000/blob/master/index.rst>`_. 
+Another nice example of an LSST technote is `(Wood-Vasey 2016) <http://dmtn-008.lsst.io/>`_ - again, the restructured text is 
+visible `here <https://github.com/lsst-dm/dmtn-008/blob/master/index.rst>`_.
+  
+For a guide to reStructuredText writing, please see the `LSST docs reST styleguide <http://docs.lsst.codes/en/latest/development/docs/rst_styleguide.html>`_. There are many other reST resources on the web, such as `this cheatsheet <https://github.com/ralsina/rst-cheatsheet/blob/master/rst-cheatsheet.rst>`_.
