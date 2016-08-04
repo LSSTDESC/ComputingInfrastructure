@@ -26,10 +26,10 @@ This is a template restructuredtext LSST DESC Note, for you to adapt for your ow
 Getting Started
 ===============
 * Fork the GitHub repository of your project if you haven't already. 
-* Under the doc/LSST_DESC_Notes directory (which you might have to create), make a new subdirectory with a suitable name to contain your LSST DESC Note. This name needs to be unique to this repository, but need not contain the name of the repository.
+* Under the ``doc/LSST_DESC_Notes`` directory (which you might have to create), make a new subdirectory with a suitable name to contain your LSST DESC Note. This name needs to be unique to this repository, but need not contain the name of the repository.
 * Copy the `Computing Infrastructure LSST DESC Note template <https://github.com/DarkEnergyScienceCollaboration/ComputingInfrastructure/blob/master/doc/LSST_DESC_Notes/template_LSST_DESC_Note.rst>`_ (i.e. this file) into your new directory, and rename it ``index.rst``.
-* Edit your new `index.rst` file with the contents of your Note, following the guidelines in the template.
-* Add files for figures in a subfolder called `_static`.
+* Edit your new ``index.rst`` file with the contents of your Note, following the guidelines in the template.
+* Add files for figures in a subfolder called ``_static``.
 * When your Note is complete and ready for review, submit a Pull Request to the base repo and ask your project's leads and/or your working group's conveners to review it.
 * The project leads will review your Note, iterate with you on modifications to it via the comments on the Pull Request, and finally merge it into the repository to signify that the Note is accepted. They will then tag the repo, to mark the first version of this LSST DESC Note.
 
