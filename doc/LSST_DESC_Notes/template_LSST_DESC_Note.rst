@@ -8,7 +8,8 @@
   * https://github.com/lsst-dm/dmtn-008/blob/master/index.rst for a nice example LSST technote by Michael Wood-Vasey, which is rendered by the LSST technotes system at http://dmtn-008.lsst.io/en/latest/
   * http://docs.lsst.codes/en/latest/development/docs/rst_styleguide.html for a guide to reStructuredText writing, and https://github.com/ralsina/rst-cheatsheet/blob/master/rst-cheatsheet.rst for a nice cheatsheet.
 
-
+.. role:: raw-math(raw)
+    :format: latex html
 
 ===============================================
 LSST DESC Notes: Template and Author Guidelines
@@ -17,12 +18,12 @@ LSST DESC Notes: Template and Author Guidelines
 *Heather Kelly, Phil Marshall*
 
 .. |date| date::
-This document was generated on: |date|
+This Note was generated on: |date|
 
 
 Introduction
 ============
-This is a template LSST DESC Note, for you to adapt for your own work. It also contains instructions for how to get started writing a note.
+This is a template restructuredtext LSST DESC Note, for you to adapt for your own work. It also contains instructions for how to get started writing a note.
 
 Getting Started
 ===============
@@ -52,6 +53,17 @@ And so is this.
 Another Subsection
 ------------------
 And so on.
+
+Math
+====
+
+You can typeset mathematics using latex commands like this:
+
+.. math::
+
+  \langle f(k) \rangle = \frac{ \sum_{t=0}^{N}f(t,k) }{N}
+
+While this does not render on GitHub, it should get `picked up by Sphinx <http://www.sphinx-doc.org/en/stable/ext/math.html>`_.
 
 
 Code
