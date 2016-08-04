@@ -8,8 +8,6 @@
   * https://github.com/lsst-dm/dmtn-008/blob/master/index.rst for a nice example LSST technote by Michael Wood-Vasey, which is rendered by the LSST technotes system at http://dmtn-008.lsst.io/en/latest/
   * http://docs.lsst.codes/en/latest/development/docs/rst_styleguide.html for a guide to reStructuredText writing, and https://github.com/ralsina/rst-cheatsheet/blob/master/rst-cheatsheet.rst for a nice cheatsheet.
 
-.. role:: raw-math(raw)
-    :format: latex html
 
 ===============================================
 LSST DESC Notes: Template and Author Guidelines
