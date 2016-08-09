@@ -33,11 +33,11 @@ Getting Started
     your LSST DESC Note. This name needs to be unique to this
     repository, but need not contain the name of the repository.
 -   Copy the [Computing Infrastructure LSST DESC Note
-    template](https://github.com/DarkEnergyScienceCollaboration/ComputingInfrastructure/blob/master/doc/LSST_DESC_Notes/template_LSST_DESC_Note.rst) (i.e.
-    this file) into your new directory, and rename it `index.rst`.
--   Edit your new index.rst file with the contents of your Note,
+    template](https://github.com/DarkEnergyScienceCollaboration/ComputingInfrastructure/blob/master/doc/LSST_DESC_Notes/template_LSST_DESC_Note.md) (i.e.
+    this file) into your new directory, and rename it `index.md`.
+-   Edit your new `index.md` file with the contents of your Note,
     following the guidelines in the template.
--   Add files for figures in a subfolder called \_static.
+-   Add files for figures in a subfolder called `_static`.
 -   When your Note is complete and ready for review, submit a Pull
     Request to the base repo and ask your project's leads and/or your
     working group's conveners to review it.
@@ -107,7 +107,7 @@ to the `_static` subdirectory in your Note's folder. Here's an example:
 This is the figure caption: above we have the LSST DESC logo, in PNG format.
 
 And then the text continues. Note that GitHub ignores the image sizing
-commands when presenting reST format documents; Sphinx might not.
+commands when presenting markdown format documents; Sphinx might not.
 
 References
 ----------
@@ -130,7 +130,9 @@ Another nice example of an LSST technote is [(Wood-Vasey
 visible
 [here](https://github.com/lsst-dm/dmtn-008/blob/master/index.rst).
 
-For a guide to reStructuredText writing, please see the [LSST docs reST
+<!-- For a guide to reStructuredText writing, please see the [LSST docs reST
 styleguide](http://docs.lsst.codes/en/latest/development/docs/rst_styleguide.html).
 There are many other reST resources on the web, such as [this
-cheatsheet](https://github.com/ralsina/rst-cheatsheet/blob/master/rst-cheatsheet.rst).
+cheatsheet](https://github.com/ralsina/rst-cheatsheet/blob/master/rst-cheatsheet.rst).-->
+
+For a guide to writing markdown documents, check out this [useful little cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
