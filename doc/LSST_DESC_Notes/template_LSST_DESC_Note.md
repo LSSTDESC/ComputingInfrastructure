@@ -1,17 +1,5 @@
 ![](./_static/header.png)
 
-> name
->
-> :   header
->
-> target
->
-> :   ./\_static/header.png
->
-> align
->
-> :   center
->
 LSST DESC Notes Template and Author Guidelines
 ==============================================
 
@@ -27,12 +15,12 @@ introduction to preparing Notes in restructuredtext, highlighting
 aspects of LSST DESC Note style, and giving some pointers to good
 resources.
 
-This Note was generated on: |date|
+This Note was generated on: <add date here by hand>
 
 Introduction
 ------------
 
-This is a template restructuredtext LSST DESC Note, for you to adapt for
+This is a template markdown LSST DESC Note, for you to adapt for
 your own work. It also contains instructions for how to get started
 writing a note.
 
@@ -97,13 +85,13 @@ Code
 
 You can show code in blocks like this:
 
-``` {.sourceCode .python}
+```python
 print "Hello World"
 ```
 
 or this:
 
-``` {.sourceCode .bash}
+```bash
 echo "Hello World"
 ```
 
@@ -116,28 +104,10 @@ To add figures, add the required image file (PNG, SVG or JPG preferred)
 to the `_static` subdirectory in your Note's folder. Here's an example:
 
 ![](./_static/desc-logo.png)
-
-> name
->
-> :   fig-logo
->
-> target
->
-> :   ./\_static/desc-logo.png
->
-> width
->
-> :   200px
->
-> align
->
-> :   center
->
-> This is the figure caption: above we have the LSST DESC logo, in PNG
-> format.
+This is the figure caption: above we have the LSST DESC logo, in PNG format.
 
 And then the text continues. Note that GitHub ignores the image sizing
-commands when presenting reST format documents; sphinx might not.
+commands when presenting reST format documents; Sphinx might not.
 
 References
 ----------
