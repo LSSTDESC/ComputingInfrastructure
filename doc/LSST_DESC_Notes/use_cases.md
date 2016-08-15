@@ -20,6 +20,11 @@ The cross-references between Notes in this compendium would, ideally,
 point locally (within the PDF) and not to any web view of the Note.
 
 
-### Automatically generate `LaTeX` for an LSST DESC Notes
+### Automatically generate `LaTeX` for an LSST DESC Note
 
 From an `rst` or `md` format Note, automatically generate a `LaTeX` file with associated figures, and a bibtex database. These products would then be more easily munged into PhD theses or journal papers.
+
+
+### Cite an LSST DESC Note in an ApJ Paper
+
+LSST DESC Notes must be citeable objects, having at least a unique URL and at best (and perhaps not in all cases) an ADS-indexed DOI. 
