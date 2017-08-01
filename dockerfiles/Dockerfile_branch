@@ -1,0 +1,16 @@
+FROM hepcce/desc_dm:v13_0_suse
+
+ARG EUPS_TAG=v13_0
+ARG BRANCH=obs_lsstSim 2017.02.08.twinkles-9-g02e891a
+
+RUN zypper install -y time
+RUN /bin/bash -c 'source /lsst/stack/loadLSST.bash; \
+    cd /lsst; \
+    git clone https://github.com/lsst/obs_lsstSim; \
+    cd obs_lsstSim; \
+    git checkout DC1_noise_hack; \
+    setup -r . -t  $EUPS_TAG; \
+    scons; \
+    scons install; \
+    scons declare; \
+    setup $BRANCH -t $EUPS_TAG;'
