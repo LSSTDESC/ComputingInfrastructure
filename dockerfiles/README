@@ -1,2 +1,0 @@
-Build base image using `Dockerfile`.  
-Build branch ontop of base image using `Dockerfile_branch`.  
