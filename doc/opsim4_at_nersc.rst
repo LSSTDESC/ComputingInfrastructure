@@ -123,7 +123,7 @@ This command requests a node for interactive use, and makes the
 .. code:: sh
 
     salloc -N 1 --qos=interactive \
-      --mem=8192 --mincpus=3 \
+      --mem=23768 --mincpus=4 \
       --image=docker:oboberg/opsim4:061117 \
       -t 03:30:00 -L SCRATCH -C haswell
 
@@ -319,7 +319,7 @@ Ask for a node on which to run
 .. code:: sh
 
     salloc -N 1 --qos=interactive \
-      --mem=8192 --mincpus=3 \
+      --mem=23768 --mincpus=4 \
       --image=docker:oboberg/opsim4:061117 \
       -t 03:45:00 -L SCRATCH -C haswell
 
