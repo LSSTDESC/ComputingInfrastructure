@@ -171,6 +171,8 @@ their data from the home area.
 Now, exit the container (log out), so that you can restart it with the
 writable home area.
 
+Of course, replace ``neilsen`` with your own username.
+
 Restart the ``shifter`` image, using your new copy of the home area as the home area
 ------------------------------------------------------------------------------------
 
