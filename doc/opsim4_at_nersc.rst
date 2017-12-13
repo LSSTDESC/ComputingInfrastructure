@@ -123,11 +123,12 @@ This command requests a node for interactive use, and makes the
 .. code:: sh
 
     salloc -N 1 --qos=interactive \
+      --mem=8192 --mincpus=3 \
       --image=docker:oboberg/opsim4:061117 \
       -t 03:30:00 -L SCRATCH -C haswell
 
-This command requests the node for only 30 minutes. More time can be
-requested, the NERSC imposes fairly short upper limit.
+This command requests the node for only 3.5 hours. (NERSC imposes
+fairly short upper limit on interactive nodes.)
 
 The result of running this ``salloc`` command on ``cori`` is a prompt on a
 newly allocated node. 
@@ -140,7 +141,7 @@ it, but it doesn't actually start ``shifter``. To do that:
 
 .. code:: sh
 
-    shifter --volume=$SCRATCH:/mnt
+    MYNERSCUSER=${USER} shifter --volume=$SCRATCH:/mnt
 
 The ``--volume`` parameter provides a way for the container to write to
 the NERSC scratch disk.
@@ -155,8 +156,17 @@ it, then the ``home`` area in the container can be copied into the
 .. code:: sh
 
     cd /home
-    mkdir /global/u2/n/neilsen/shifter_disks/opsim4/061117/home
-    rsync -rlpt opsim /global/u2/n/neilsen/shifter_disks/opsim4/061117/home
+    MYNERSCHOME=$(readlink -f $(ls -d /global/u?/?/${MYNERSCUSER} | head -1))
+    mkdir -p ${MYNERSCHOME}/shifter_disks/opsim4/061117/home
+    rsync -rlpt opsim ${MYNERSCHOME}/shifter_disks/opsim4/061117/home
+
+I put the home are in the container in my NERSC home disk rather than
+the NERSC scratch disk, because, although the scratech disk is well
+optimized for reading and writing to long files, there can be a long
+latency in opening files and getting file attributes, and the home
+area is better optimized for smaller files: things like ``eups`` ``setup``
+commands and loading ``python`` modules are **much** faster when they read
+their data from the home area.
 
 Now, exit the container (log out), so that you can restart it with the
 writable home area.
@@ -174,7 +184,7 @@ necessary for ``eups``.
     env -i OPSIM_HOSTNAME=ehntesthost1 \
       shifter --image=docker:oboberg/opsim4:061117 \
         --volume=$SCRATCH:/mnt \
-        --volume=$SCRATCH/shifter_disks/opsim4/061117/home/opsim:/home/opsim \
+        --volume=$HOME/shifter_disks/opsim4/061117/home/opsim:/home/opsim \
         -- /home/opsim/startup.sh
 
 Now, you should be in a container in which the home area is writable (and
@@ -246,6 +256,15 @@ directly. (I note that the contents of ``/home/opsim/repos`` include
     sed -i 's/self.socs_timeout = 180.0/self.socs_timeout = 300.0/g' \
      /home/opsim/repos/sims_ocs/python/lsst/sims/ocs/kernel/simulator.py
 
+Create the directory into which the scheduler expects to put its logs
+---------------------------------------------------------------------
+
+This directory name to be hard coded (relative to the scheduler python package):
+
+.. code:: sh
+
+    mkdir /home/opsim/repos/ts_scheduler/python/lsst/ts/log
+
 Run a test sim
 --------------
 
@@ -256,7 +275,7 @@ Run a test sim
     setup ts_astrosky_model git
     setup ts_scheduler
     setup sims_ocs
-    opsim4 --frac-duration=0.003 -c "test one day simaultion 3" -v
+    opsim4 --frac-duration=0.003 -c "test one day simaultion" -v --scheduler-timeout 600
 
 The simulation does not actually run correctly, resulting in this in
 the log file:
@@ -290,3 +309,57 @@ This seems to happen as a result of line 118 of
 return of -100. ``self.sal`` is an instance of a class imported from the
 ``SALPY_scheduler`` module defined in
 ``/mnt/opsim4/run_local/SALPY_scheduler.so``.
+
+Recipe for running opsim on an already configured ``shifter`` image
+-------------------------------------------------------------------
+
+Ask for a node on which to run
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code:: sh
+
+    salloc -N 1 --qos=interactive \
+      --mem=8192 --mincpus=3 \
+      --image=docker:oboberg/opsim4:061117 \
+      -t 03:45:00 -L SCRATCH -C haswell
+
+This should put you in a shell on the allocated node.
+
+Start the ``opsim`` ``shifter`` container
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+On the newly allocated node:
+
+.. code:: sh
+
+    env -i OPSIM_HOSTNAME=${USER}opsimhost \
+      shifter --image=docker:oboberg/opsim4:061117 \
+        --volume=$SCRATCH:/mnt \
+        --volume=$HOME/shifter_disks/opsim4/061117/home/opsim:/home/opsim \
+        -- /home/opsim/startup.sh
+
+This should put you in a shell in the container.
+
+Prepare the environment in the container
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In the container:
+
+.. code:: sh
+
+    cd ~/run_local
+    setup sims_skybrightness_pre git
+    setup ts_astrosky_model git
+    setup ts_scheduler
+    setup sims_ocs
+
+Start ``opsim``
+~~~~~~~~~~~~~~~
+
+In the same shell configured above:
+
+.. code:: sh
+
+    opsim4 --frac-duration=0.003 -c "test one day simaultion" -v --scheduler-timeout 600
+
+It still fails as before, though.
